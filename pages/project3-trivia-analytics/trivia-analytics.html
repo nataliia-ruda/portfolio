@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trivia Analytics - Nataliia Ruda</title>
+    <link rel="stylesheet" href="../project1-ducktrack/project.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container nav">
+        <a class="logo" href="../landing/main.html#top">NR</a>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="../landing/main.html#projects">Projects</a>
+          <a href="../landing/main.html#about">About</a>
+          <a href="../landing/main.html#contact">Contact</a>
+        </nav>
+
+        <button
+          class="menu-btn"
+          id="menuBtn"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <a class="link" href="../landing/main.html#projects"
+            >← Back to projects</a
+          >
+
+          <h1 class="page-title">Trivia Analytics</h1>
+
+          <div class="slider" aria-label="Screenshots">
+            <button
+              class="slider-btn prev"
+              type="button"
+              aria-label="Previous screenshot"
+            >
+              ‹
+            </button>
+
+            <div class="slider-viewport">
+              <div class="slider-track" id="sliderTrack">
+                <div class="slide">
+                  <video
+                    src="../../videos/trivia_analytics_video.mp4"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                    aria-label="DuckTrack landing page preview video"
+                  ></video>
+                </div>
+              </div>
+            </div>
+
+            <button
+              class="slider-btn next"
+              type="button"
+              aria-label="Next screenshot"
+            >
+              ›
+            </button>
+
+            <div
+              class="dots"
+              id="sliderDots"
+              aria-label="Slide indicators"
+            ></div>
+          </div>
+
+          <div class="project-description">
+            <p>
+              A small React app that visualizes data from the Open Trivia DB API.
+              The app fetches 50 trivia questions and displays simple analytics using charts.
+            </p>
+
+            <div class="features-block">
+              <p class="features-label">Features</p>
+              <ul class="project-features frontend-features">
+                <li>Fetches 50 questions from Open Trivia DB</li>
+                <li>Displays available categories</li>
+                <li>Shows distribution of questions by category</li>
+                <li>Shows distribution of questions by difficulty</li>
+                <li>Allows filtering analytics by single category</li>
+                <li>Simple and clean UI</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="two-col meta-grid">
+            <div class="mini-card mini-card--compact">
+              <p class="card-label">Technologies</p>
+              <ul class="tags tags--compact">
+                <li>React</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Recharts</li>
+                <li>Open Trivia DB API</li>
+              </ul>
+            </div>
+
+            <div class="mini-card mini-card--compact">
+              <p class="card-label">Links</p>
+              <div class="btn-row">
+                <a
+                  class="btn ghost"
+                  href="https://github.com/nataliia-ruda/trivia-anatytics"
+                  target="_blank"
+                  rel="noreferrer"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+          <footer class="footer">
+            <p class="muted tiny">© <span id="year"></span> Nataliia Ruda</p>
+          </footer>
+        </div>
+      </section>
+    </main>
+
+    <script src="../project1-ducktrack/project.js"></script>
+  </body>
+</html>

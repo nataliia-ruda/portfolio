@@ -1,64 +1,232 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Job Applications Tracker — Nataliia Ruda</title>
-    <link rel="stylesheet" href="../styles.css" />
+    <title>DuckTrack - Job Applications Tracker - Nataliia Ruda</title>
+    <link rel="stylesheet" href="ducktrack.css" />
   </head>
 
   <body>
     <header class="header">
       <div class="container nav">
-        <a class="logo" href="../index.html#top">NR</a>
-        <nav class="nav-links">
-          <a href="../index.html#projects">Projects</a>
-          <a href="../index.html#about">About</a>
-          <a href="../index.html#contact">Contact</a>
+        <a class="logo" href="#top">NR</a>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="../landing/main.html#projects">Projects</a>
+          <a href="../landing/main.html#about">About</a>
+          <a href="../landing/main.html#contact">Contact</a>
         </nav>
+
+        <button
+          class="menu-btn"
+          id="menuBtn"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
       </div>
     </header>
 
     <main>
       <section class="section">
         <div class="container">
-          <a class="link" href="../index.html#projects">← Back to projects</a>
+          <a class="link" href="../landing/main.html#projects"
+            >← Back to projects</a
+          >
 
-          <h1 style="margin-top:14px;">Job Applications Tracker</h1>
-          <p class="muted" style="max-width: 760px; margin-top: 10px;">
-            A full-stack app to track job applications, manage interviews, and send reminders.
-            Includes authentication, CRUD for applications, and interview scheduling.
-          </p>
+          <h1 class="page-title">DuckTrack - Job Applications Tracker</h1>
 
-          <div class="two-col" style="margin-top:16px;">
-            <div class="mini-card">
-              <h4>Technologies</h4>
-              <ul class="tags" style="margin-top:10px;">
-                <li>React</li><li>Material UI</li><li>Node.js</li><li>Express</li><li>MySQL</li>
+          <div class="slider" aria-label="Screenshots">
+            <button
+              class="slider-btn prev"
+              type="button"
+              aria-label="Previous screenshot"
+            >
+              ‹
+            </button>
+
+            <div class="slider-viewport">
+              <div class="slider-track" id="sliderTrack">
+                <div class="slide">
+                  <video
+                    src="../../videos/ducktrack_landing_video.mp4"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                    aria-label="DuckTrack landing page preview video"
+                  ></video>
+                </div>
+                <div class="slide">
+                  <img
+                    src="../../images/ducktrack-home.png"
+                    alt="DuckTrack home page screenshot"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    src="../../images/ducktrack-applications.png"
+                    alt="DuckTrack applications table screenshot"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    src="../../images/ducktrack-analytics.png"
+                    alt="DuckTrack analytics dashboard screenshot"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    src="../../images/ducktrack-gif.gif"
+                    alt="DuckTrack animated preview"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <button
+              class="slider-btn next"
+              type="button"
+              aria-label="Next screenshot"
+            >
+              ›
+            </button>
+
+            <div
+              class="dots"
+              id="sliderDots"
+              aria-label="Slide indicators"
+            ></div>
+          </div>
+
+          <div class="project-description">
+            <p>
+              DuckTrack is a full-stack web application created to help users
+              manage and organize their job applications efficiently. Users can
+              store application details such as employer, job title, and job
+              description using a simple and intuitive form, and track their
+              progress over time.
+            </p>
+
+            <p>
+              Each application’s status can be updated as new responses are
+              received, and users can add personal notes to keep all relevant
+              information in one place. The app also allows users to log
+              interviews and receive an email reminder 24 hours before the
+              scheduled interview.
+            </p>
+
+            <p>
+              DuckTrack includes a special outdated application system that
+              users can activate. If the status of an application has not been
+              updated for four weeks, the app automatically marks it as
+              "ghosted" and highlights it in a dedicated section on the home
+              page. This feature helps draw attention to inactive applications
+              and encourages users to follow up or take action.
+            </p>
+
+            <p>
+              DuckTrack was built with a focus on real-life usability and aims
+              to make the job search process more structured, transparent, and
+              less stressful.
+            </p>
+
+            <div class="features-block">
+              <p class="features-label">Features</p>
+
+              <h3>Frontend &amp; User Experience</h3>
+              <ul class="project-features frontend-features">
+                <li>
+                  User authentication UI (registration, login, email
+                  verification flow)
+                </li>
+                <li>
+                  Add new job applications via a structured and intuitive form
+                </li>
+                <li>Display job applications in a table view</li>
+                <li>Sort, filter, update, and delete job applications</li>
+                <li>KPI dashboard with visual statistics</li>
+                <li>Smooth UI animations for an improved user experience</li>
+              </ul>
+
+              <h3>Backend &amp; Security</h3>
+              <ul class="project-features backend-features">
+                <li>Secure user registration and login</li>
+                <li>Password hashing with bcrypt</li>
+                <li>Email verification via token-based confirmation</li>
+                <li>Session-based authentication with HttpOnly cookies</li>
+                <li>
+                  Protected API routes (users can access only their own data)
+                </li>
+                <li>Full CRUD operations for job applications</li>
+              </ul>
+
+              <h3>Automation &amp; Smart Features</h3>
+              <ul class="project-features automation-features">
+                <li>
+                  Interview email reminders sent automatically 24 hours before
+                  interviews
+                </li>
+                <li>
+                  Auto outdated application system that marks inactive
+                  applications as "ghosted" and highlights them on the home page
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="two-col meta-grid">
+            <div class="mini-card mini-card--compact">
+              <p class="card-label">Technologies</p>
+              <ul class="tags tags--compact">
+                <li>React</li>
+                <li>JavaScript</li>
+                <li>MUI</li>
+                <li>Charts.js</li>
+                <li>GSAP</li>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>MySQL</li>
               </ul>
             </div>
 
-            <div class="mini-card">
-              <h4>Links</h4>
-              <div style="display:flex; gap:14px; margin-top:10px; flex-wrap:wrap;">
-                <a class="btn ghost" href="#" target="_blank" rel="noreferrer">Live demo</a>
-                <a class="btn primary" href="#" target="_blank" rel="noreferrer">GitHub</a>
+            <div class="mini-card mini-card--compact">
+              <p class="card-label">Links</p>
+              <div class="btn-row">
+                <a
+                  class="btn ghost"
+                  id="btn-live"
+                  href="https://ducktrack.de/"
+                  target="_blank"
+                  >Live</a
+                >
+                <a
+                  class="btn ghost"
+                  href="https://github.com/nataliia-ruda/DuckTrack-Front-End"
+                  target="_blank"
+                  >GitHub Frontend</a
+                >
+
+                <a
+                  class="btn ghost"
+                  href="https://github.com/nataliia-ruda/DuckTrack-Back-End"
+                  target="_blank"
+                  rel="noreferrer"
+                  >GitHub Backend</a
+                >
               </div>
             </div>
           </div>
-
-          <div class="section-head" style="margin-top:26px;">
-            <h2>Screenshots</h2>
-            <p class="muted">Swipe/scroll to view more.</p>
-          </div>
-
-          <div class="gallery">
-            <img src="../assets/projects/job-tracker/1.png" alt="Job tracker screenshot 1" />
-            <img src="../assets/projects/job-tracker/2.png" alt="Job tracker screenshot 2" />
-            <img src="../assets/projects/job-tracker/3.png" alt="Job tracker screenshot 3" />
-          </div>
+          <footer class="footer">
+            <p class="muted tiny">© <span id="year"></span> Nataliia Ruda</p>
+          </footer>
         </div>
       </section>
     </main>
+
+    <script src="ducktrack.js"></script>
   </body>
 </html>

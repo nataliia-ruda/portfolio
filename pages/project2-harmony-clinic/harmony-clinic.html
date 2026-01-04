@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harmony Clinic - Nataliia Ruda</title>
+    <link rel="stylesheet" href="../project1-ducktrack/project.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container nav">
+        <a class="logo" href="#top">NR</a>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="../landing/main.html#projects">Projects</a>
+          <a href="../landing/main.html#about">About</a>
+          <a href="../landing/main.html#contact">Contact</a>
+        </nav>
+
+        <button
+          class="menu-btn"
+          id="menuBtn"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <a class="link" href="../landing/main.html#projects"
+            >← Back to projects</a
+          >
+
+          <h1 class="page-title">Harmony Clinic</h1>
+
+          <div class="slider" aria-label="Screenshots">
+            <button
+              class="slider-btn prev"
+              type="button"
+              aria-label="Previous screenshot"
+            >
+              ‹
+            </button>
+
+            <div class="slider-viewport">
+              <div class="slider-track" id="sliderTrack">
+                <div class="slide">
+                  <video
+                    src="../../videos/harmony_clinic_video.mp4"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                    aria-label="DuckTrack landing page preview video"
+                  ></video>
+                </div>
+                <div class="slide">
+                  <img
+                    src="../../images/harmony_clinic_landing.png"
+                    alt="DuckTrack home page screenshot"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    src="../../images/harmony_clinic_pricelist.png"
+                    alt="DuckTrack applications table screenshot"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    src="../../images/harmony_clinic_footer.png"
+                    alt="DuckTrack analytics dashboard screenshot"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    src="../../images/harmony_clinic_about.png"
+                    alt="DuckTrack animated preview"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <button
+              class="slider-btn next"
+              type="button"
+              aria-label="Next screenshot"
+            >
+              ›
+            </button>
+
+            <div
+              class="dots"
+              id="sliderDots"
+              aria-label="Slide indicators"
+            ></div>
+          </div>
+
+          <div class="project-description">
+            <p>
+              A multi-page commercial website concept created for a fictional women’s health clinic. This front-end-only project was built using HTML, CSS, and JavaScript, without server-side logic or a database. It focuses on responsive design, usability, and interactive features.
+            </p>
+
+            <div class="features-block">
+              <p class="features-label">Features</p>
+              <ul class="project-features frontend-features">
+                <li>Multi-page clinic website layout</li>
+                <li>Landing page with clear structure and navigation</li>
+                <li>Image galleries</li>
+                <li>Responsive design</li>
+                <li>Service rating form</li>
+                <li>“Call back” request form</li>
+                <li>Weather widget integrated with the OpenWeather API</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="two-col meta-grid">
+            <div class="mini-card mini-card--compact">
+              <p class="card-label">Technologies</p>
+              <ul class="tags tags--compact">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>OpenWeather API</li>
+              </ul>
+            </div>
+
+            <div class="mini-card mini-card--compact">
+              <p class="card-label">Links</p>
+              <div class="btn-row">
+                <a
+                  class="btn ghost"
+                  href="https://github.com/nataliia-ruda/harmony-clinic-website"
+                  target="_blank"
+                  rel="noreferrer"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+          <footer class="footer">
+            <p class="muted tiny">© <span id="year"></span> Nataliia Ruda</p>
+          </footer>
+        </div>
+      </section>
+    </main>
+
+    <script src="../project1-ducktrack/project.js"></script>
+  </body>
+</html>

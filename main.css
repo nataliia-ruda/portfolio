@@ -508,11 +508,17 @@ textarea:focus {
   gap: 14px;
   padding: 18px;
   width: max-content;
+  will-change: transform;
   animation: skills-left var(--duration, 26s) linear infinite;
+  animation-play-state: paused;
 }
 
 .skills-row.reverse .skills-track {
   animation-name: skills-right;
+}
+
+.skills-marquee.is-ready .skills-track {
+  animation-play-state: running;
 }
 
 .skills-row:hover .skills-track {
@@ -568,13 +574,13 @@ textarea:focus {
 
 /* Animations */
 @keyframes skills-left {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(calc(-1 * var(--distance, 50%)), 0, 0); }
 }
 
 @keyframes skills-right {
-  from { transform: translateX(-50%); }
-  to { transform: translateX(0); }
+  from { transform: translate3d(calc(-1 * var(--distance, 50%)), 0, 0); }
+  to { transform: translate3d(0, 0, 0); }
 }
 
 @media (prefers-reduced-motion: reduce) {

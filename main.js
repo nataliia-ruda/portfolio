@@ -56,6 +56,36 @@ if (menuBtn && navLinks) {
 
 
 
+// Skills marquee - keep scroll speed consistent across rows
+const skillsMarquee = document.querySelector(".skills-marquee");
+const skillsTracks = document.querySelectorAll(".skills-track");
+
+function syncSkillsSpeed() {
+  const PIXELS_PER_SECOND = 45;
+
+  skillsTracks.forEach((track) => {
+    const children = track.children;
+    const half = children.length / 2;
+    const distance = children[half].offsetLeft - children[0].offsetLeft;
+    const duration = distance / PIXELS_PER_SECOND;
+    track.style.setProperty("--distance", `${distance}px`);
+    track.style.setProperty("--duration", `${duration}s`);
+  });
+}
+
+if (skillsTracks.length) {
+  // Compute the correct per-row speed before the animation is ever
+  // allowed to run, so it never starts at the wrong (fallback) pace.
+  syncSkillsSpeed();
+  skillsMarquee.classList.add("is-ready");
+
+  let resizeTimer;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(syncSkillsSpeed, 200);
+  });
+}
+
 // Contact Form
 const form = document.getElementById("contactForm");
 const formMessage = document.getElementById("formMessage");

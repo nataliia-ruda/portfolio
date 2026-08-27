@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JobFit Analyzer - Nataliia Ruda</title>
+    <link rel="stylesheet" href="../project1-ducktrack/project.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container nav">
+        <a class="logo" href="../../index.html#top">NR</a>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="../../index.html#projects">Projects</a>
+          <a href="../../index.html#about">About</a>
+          <a href="../../index.html#contact">Contact</a>
+        </nav>
+
+        <button
+          class="menu-btn"
+          id="menuBtn"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <a class="link" href="../../index.html#projects"
+            >← Back to projects</a
+          >
+
+          <h1 class="page-title">JobFit Analyzer</h1>
+
+          <div class="slider" aria-label="Screenshots">
+            <button
+              class="slider-btn prev"
+              type="button"
+              aria-label="Previous screenshot"
+            >
+              ‹
+            </button>
+
+            <div class="slider-viewport">
+              <div class="slider-track" id="sliderTrack">
+                <div class="slide">
+                  <img
+                    src="../../images/job_fit_analyzer_cover.png"
+                    alt="JobFit Analyzer placeholder screenshot"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    src="../../images/job_fit_analyzer_popup.png"
+                    alt="JobFit Analyzer placeholder screenshot"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <button
+              class="slider-btn next"
+              type="button"
+              aria-label="Next screenshot"
+            >
+              ›
+            </button>
+
+            <div
+              class="dots"
+              id="sliderDots"
+              aria-label="Slide indicators"
+            ></div>
+          </div>
+
+          <div class="project-description">
+            <p>
+              JobFit Analyzer lets you paste a job posting and upload your CV to instantly get an AI-generated match analysis. It returns a fit score, a breakdown of skill gaps (required vs. present in your CV), and concrete, actionable suggestions for improving your CV against that specific role.
+            </p>
+
+            <div class="features-block">
+              <p class="features-label">Features</p>
+              <ul class="project-features frontend-features">
+                <li>Upload a CV (PDF) and paste any job description.</li>
+                <li>AI analyzes the match using OpenAI's GPT-4o-mini with structured, schema-validated output.</li>
+                <li>Returns a numeric match score with color-coded feedback (green/amber/red).</li>
+                <li>Lists skill gaps, flagging which are required vs. preferred, and whether each is present in the CV.</li>
+                <li>Gives targeted CV improvement suggestions per skill area.</li>
+                <li>Clean drag-and-drop upload interface.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="two-col meta-grid">
+            <div class="mini-card mini-card--compact">
+              <p class="card-label">Technologies</p>
+              <ul class="tags tags--compact">
+                <li>React</li>
+                <li>TypeScript</li>
+                <li>Material UI</li>
+                <li>Node.js</li>
+                <li>Express</li>
+              </ul>
+            </div>
+
+            <div class="mini-card mini-card--compact">
+              <p class="card-label">Links</p>
+              <div class="btn-row">
+                <a class="btn ghost" target="_blank" href="https://github.com/nataliia-ruda/jobfit-analyzer">GitHub</a>
+              </div>
+            </div>
+          </div>
+          <footer class="footer">
+            <p class="muted tiny">© <span id="year"></span> Nataliia Ruda</p>
+          </footer>
+        </div>
+      </section>
+    </main>
+
+    <script src="../project1-ducktrack/project.js"></script>
+  </body>
+</html>

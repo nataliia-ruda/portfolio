@@ -516,24 +516,16 @@ textarea:focus {
 .skills-track {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 18px;
   padding: 18px;
   width: max-content;
   will-change: transform;
-  animation: skills-left var(--duration, 26s) linear infinite;
+  animation: skills-right var(--duration, 26s) linear infinite;
   animation-play-state: paused;
-}
-
-.skills-row.reverse .skills-track {
-  animation-name: skills-right;
 }
 
 .skills-marquee.is-ready .skills-track {
   animation-play-state: running;
-}
-
-.skills-row:hover .skills-track {
-  animation-play-state: paused;
 }
 
 /* Skill pill */
@@ -541,12 +533,12 @@ textarea:focus {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  min-width: 110px;
-  height: 48px;
-  padding: 0 18px;
-  border-radius: 14px;
-  font-size: 14px;
+  gap: 12px;
+  min-width: 140px;
+  height: 60px;
+  padding: 0 24px;
+  border-radius: 16px;
+  font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.02em;
   color: var(--text);
@@ -561,14 +553,14 @@ textarea:focus {
 }
 
 .skill-pill svg {
-  width: 20px;
-  height: 20px;
+  width: 26px;
+  height: 26px;
   flex-shrink: 0;
 }
 
 .skill-pill p {
   margin: 0;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   color: inherit;
 }
@@ -584,11 +576,6 @@ textarea:focus {
 }
 
 /* Animations */
-@keyframes skills-left {
-  from { transform: translate3d(0, 0, 0); }
-  to { transform: translate3d(calc(-1 * var(--distance, 50%)), 0, 0); }
-}
-
 @keyframes skills-right {
   from { transform: translate3d(calc(-1 * var(--distance, 50%)), 0, 0); }
   to { transform: translate3d(0, 0, 0); }

@@ -56,7 +56,7 @@ if (menuBtn && navLinks) {
 
 
 
-// Skills marquee - keep scroll speed consistent across rows
+// Skills marquee
 const skillsMarquee = document.querySelector(".skills-marquee");
 const skillsTracks = document.querySelectorAll(".skills-track");
 
@@ -68,14 +68,21 @@ function syncSkillsSpeed() {
     const half = children.length / 2;
     const distance = children[half].offsetLeft - children[0].offsetLeft;
     const duration = distance / PIXELS_PER_SECOND;
+
+    // Changing --duration/--distance on a running animation makes the
+    // browser recompute position as elapsed/duration, which snaps the
+    // track to a new spot instead of continuing smoothly. Reset the
+    // animation so it restarts cleanly at the new speed instead.
+    track.style.animation = "none";
     track.style.setProperty("--distance", `${distance}px`);
     track.style.setProperty("--duration", `${duration}s`);
+    void track.offsetWidth;
+    track.style.animation = "";
   });
 }
 
 if (skillsTracks.length) {
-  // Compute the correct per-row speed before the animation is ever
-  // allowed to run, so it never starts at the wrong (fallback) pace.
+
   syncSkillsSpeed();
   skillsMarquee.classList.add("is-ready");
 
